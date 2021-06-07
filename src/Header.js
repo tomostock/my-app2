@@ -11,15 +11,16 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
-import Collapse from '@material-ui/core/Collapse';
-
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuList from '@material-ui/core/MenuList';
 import './index.css';
 
 const useStyles = makeStyles((theme) => ({
+
   root: {
+    position: 'fixed',
+    width: '100%',
     flexGrow: 1,
   },
   menuButton: {
