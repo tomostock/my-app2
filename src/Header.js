@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     width: '100%',
     flexGrow: 1,
+    zIndex: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -113,7 +114,7 @@ export default function SearchAppBar() {
   );
 
   return (
-    <div className={classes.root}>
+    <header className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <MenuItem onClick={handleMenuOpen}>
@@ -145,6 +146,6 @@ export default function SearchAppBar() {
         </Toolbar>
       </AppBar>
       {renderMenu}
-    </div>
+    </header>
   );
 }
