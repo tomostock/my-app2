@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import PrimarySearchAppBar from './Header';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div className="contents">
+    <PrimarySearchAppBar />
     <App />
-  </React.StrictMode>,
+  </div>,
   document.getElementById('root')
 );
 
