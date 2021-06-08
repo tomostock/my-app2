@@ -13,7 +13,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
-import { Link } from 'react-router-dom';
+import Nav from './Nav';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function  Header() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -101,9 +101,7 @@ export default function SearchAppBar() {
         <Paper square>
           <ClickAwayListener onClickAway={handleMenuClose}>
           <MenuList>
-            <Link to="/"><MenuItem>App</MenuItem></Link>
-            <Link to="/Profile"><MenuItem>Profile</MenuItem></Link>
-            <MenuItem>Logout</MenuItem>
+            <Nav />
           </MenuList>
           </ClickAwayListener>
         </Paper>
