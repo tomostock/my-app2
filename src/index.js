@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import PrimarySearchAppBar from './Header';
-import App from './App';
+import Routes from './Route';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <div className="contents">
-    <PrimarySearchAppBar />
-    <App />
+    <Routes />
   </div>,
   document.getElementById('root')
 );

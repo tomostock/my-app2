@@ -3,8 +3,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
+import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
-// import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -13,8 +13,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
-import MenuList from '@material-ui/core/MenuList';
-import './index.css';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -101,11 +100,11 @@ export default function SearchAppBar() {
       >
         <Paper square>
           <ClickAwayListener onClickAway={handleMenuClose}>
-            <MenuList>
-              <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-              <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
-            </MenuList>
+          <MenuList>
+            <Link to="/"><MenuItem>App</MenuItem></Link>
+            <Link to="/Profile"><MenuItem>Profile</MenuItem></Link>
+            <MenuItem>Logout</MenuItem>
+          </MenuList>
           </ClickAwayListener>
         </Paper>
       </Grow>
