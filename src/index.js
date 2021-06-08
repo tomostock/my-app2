@@ -5,9 +5,7 @@ import Routes from './Route';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <div className="contents">
-    <Routes />
-  </div>,
+  <Routes />,
   document.getElementById('root')
 );
 

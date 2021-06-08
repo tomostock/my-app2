@@ -13,12 +13,14 @@ class Routes extends React.Component {
         <Route>
           <Header />
         </Route>
-        <Route exact path='/' component={App}/>
-        <Route path='/Profile' component={Profile}/>
-        <Route path='/Game' component={Game}/>
-        <Route>
-          <Footer />
-        </Route>
+        <div className='contents'>
+          <Route exact path='/' component={App}/>
+          <Route path='/Profile' component={Profile}/>
+          <Route path='/Game' component={Game}/>
+          <Route>
+            <Footer />
+          </Route>
+        </div>
       </Router>
     )
   }

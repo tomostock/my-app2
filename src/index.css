@@ -12,3 +12,11 @@ code {
     monospace;
 }
 
+.MuiDrawer-paper {
+  background-color: #424242!important;
+}
+
+.footer .flex {
+    display: flex;
+    justify-content: space-between;
+}

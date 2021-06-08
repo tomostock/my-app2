@@ -13,9 +13,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'flex-end',
+    '&flex': {
+      display: 'flex',
+    }
+
   },
   logo: {
     padding: '20px',
+    textAlign: 'right',
   }
 
 }));
@@ -29,12 +34,12 @@ function Footer() {
   return (
     <div className={classes.root}>
       <div className={classes.inner}>
-        <MenuList onClick={scrollToTopOnMount}>
+        <MenuList onClick={scrollToTopOnMount} className='footer'>
           <Nav />
         </MenuList>
-        <div className={classes.logo}>
-          <img src={logo} alt="logo" width="50px" />
-        </div>
+      </div>
+      <div className={classes.logo}>
+        <img src={logo} alt="logo" width="50px" />
       </div>
     </div>
   );

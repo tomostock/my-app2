@@ -2,20 +2,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  link: {
+    textDecorationLine: 'none',
+    color: 'white',
+  },
+  listItem: {
+    minHeight: '36px',
+    color: 'white',
+  }
+
+});
 
 function Nav() {
+  const classes = useStyles();
   return (
-    <div>
-      <Link to="/">
-        <MenuItem>App</MenuItem>
+    <div className="flex">
+      <Link to="/"className={classes.link}>
+        <MenuItem className={classes.listItem}>App</MenuItem>
       </Link>
-      <Link to="/Profile">
-        <MenuItem>Profile</MenuItem>
+      <Link to="/Profile"className={classes.link}>
+        <MenuItem className={classes.listItem}>Profile</MenuItem>
       </Link>
-      <Link to="/Game">
-        <MenuItem>Game</MenuItem>
+      <Link to="/Game"className={classes.link}>
+        <MenuItem className={classes.listItem}>Game</MenuItem>
       </Link>
-      <MenuItem>Logout</MenuItem>
+      <MenuItem className={classes.listItem}>Logout</MenuItem>
     </div>
   );
 }
