@@ -100,9 +100,9 @@ export default function  Header() {
       >
         <Paper square>
           <ClickAwayListener onClickAway={handleMenuClose}>
-          <MenuList>
-            <Nav />
-          </MenuList>
+            <MenuList onClick={handleMenuClose}>
+              <Nav />
+            </MenuList>
           </ClickAwayListener>
         </Paper>
       </Grow>

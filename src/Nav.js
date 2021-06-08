@@ -12,6 +12,9 @@ function Nav() {
       <Link to="/Profile">
         <MenuItem>Profile</MenuItem>
       </Link>
+      <Link to="/Game">
+        <MenuItem>Game</MenuItem>
+      </Link>
       <MenuItem>Logout</MenuItem>
     </div>
   );
