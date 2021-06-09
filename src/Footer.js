@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from './Nav';
 import MenuList from '@material-ui/core/MenuList';
-import logo from './logo192.png';
+// import logo from './logo192.png';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inner: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'flex-end',
     '&flex': {
@@ -39,7 +39,7 @@ function Footer() {
         </MenuList>
       </div>
       <div className={classes.logo}>
-        <img src={logo} alt="logo" width="50px" />
+        {/* <img src={logo} alt="logo" width="50px" /> */}
       </div>
     </div>
   );

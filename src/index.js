@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import Routes2 from './Route2';
 import Routes from './Route';
 import reportWebVitals from './reportWebVitals';
 

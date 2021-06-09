@@ -93,7 +93,7 @@ export default function MenuAppBar() {
             </Drawer>
           </React.Fragment>
           <Typography variant="h6" className={classes.title}>
-            BOOK
+            Portfolio
           </Typography>
           {auth && (
             <div>
