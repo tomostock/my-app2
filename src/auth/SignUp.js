@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
+import Button from '@material-ui/core/Button';
+import { FormControl, InputLabel, Input } from '@material-ui/core';
 
 const SignUp = ({ history }) => {
   const { signup } = useContext(AuthContext);
@@ -15,15 +17,19 @@ const SignUp = ({ history }) => {
     <div>
       <h1>Sign up</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Sign Up</button>
+        <FormControl>
+          <InputLabel>
+            Email
+          </InputLabel>
+          <Input name="email" type="email" placeholder="Email" />
+        </FormControl>
+        <FormControl>
+          <InputLabel>
+            Password
+          </InputLabel>
+          <Input name="password" type="password" placeholder="Password" />
+        </FormControl>
+        <Button variant="contained" color="primary" type="submit">Log in</Button>
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
+import SignOut from "./auth/SignOut";
 
 const useStyles = makeStyles({
   link: {
@@ -29,7 +30,7 @@ function Nav() {
       <Link to="/Game"className={classes.link}>
         <MenuItem className={classes.listItem}>Game</MenuItem>
       </Link>
-      <MenuItem className={classes.listItem}>Logout</MenuItem>
+      <MenuItem className={classes.listItem} onClick={() => SignOut()}>Logout</MenuItem>
     </div>
   );
 }

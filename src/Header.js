@@ -6,14 +6,12 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-// import Switch from '@material-ui/core/Switch';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import Nav from './Nav';
 import MenuList from '@material-ui/core/MenuList';
+import { app } from "./base";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,19 +29,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function MenuAppBar() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
   });
-  const [auth, setAuth] = React.useState(true);
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
+  const [loginEl, setLoginEl] = React.useState(null);
+  app.auth().onAuthStateChanged((user) => {
+    user ? setLoginEl(true) : setLoginEl(null);
+  });
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -62,12 +59,6 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      {/* <FormGroup>
-        <FormControlLabel
-          control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
-          label={auth ? 'Logout' : 'Login'}
-        />
-      </FormGroup> */}
       <AppBar position="static">
         <Toolbar>
           <React.Fragment key={'left'}>
@@ -95,7 +86,7 @@ export default function MenuAppBar() {
           <Typography variant="h6" className={classes.title}>
             Portfolio
           </Typography>
-          {auth && (
+          {loginEl && (
             <div>
               <IconButton
                 aria-label="account of current user"
