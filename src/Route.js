@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { AuthProvider } from "./auth/AuthProvider";
-// import PrivateRoute from "./auth/PrivateRoute";
+import PrivateRoute from "./auth/PrivateRoute";
 import Header from './Header';
 import App from './App';
 import Profile from './Profile';
@@ -23,7 +23,7 @@ class Routes extends React.Component {
           <div className='contents'>
             <Route exact path='/' component={App}/>
             <Route path='/Profile' component={Profile}/>
-            <Route path='/Game' component={Game}/>
+            <PrivateRoute path='/Game' component={Game}/>
             {/* <PrivateRoute exact path="/" component={Home} />
             <Route exact path="/login" component={Login} /> */}
             <Route exact path="/signup" component={SignUp} />
