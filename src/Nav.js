@@ -26,7 +26,7 @@ function Nav() {
   return (
     <div className="flex">
       <Link to="/"className={classes.link}>
-        <MenuItem className={classes.listItem}>App</MenuItem>
+        <MenuItem className={classes.listItem}>Top</MenuItem>
       </Link>
       <Link to="/Profile"className={classes.link}>
         <MenuItem className={classes.listItem}>Profile</MenuItem>
@@ -37,7 +37,7 @@ function Nav() {
       <Link to="/Swipe"className={classes.link}>
         <MenuItem className={classes.listItem}>Photo</MenuItem>
       </Link>
-      <Link to="/Swipe"className={classes.link}>
+      <Link to="/Contact"className={classes.link}>
         <MenuItem className={classes.listItem}>Mail</MenuItem>
       </Link>
     </div>
@@ -60,7 +60,7 @@ export function Fnav() {
       <Link to="/Swipe"className={classes.link}>
         <MenuItem className={classes.listItem}><PhotoIcon /></MenuItem>
       </Link>
-      <Link to="/Swipe"className={classes.link}>
+      <Link to="/Contact"className={classes.link}>
         <MenuItem className={classes.listItem}><MailIcon /></MenuItem>
       </Link>
     </div>

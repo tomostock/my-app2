@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './img/logo.svg';
+import './css/App.css';
 import Button from '@material-ui/core/Button';
 import Home from "./components/Home";
 import Login from "./auth/Login";

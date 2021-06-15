@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import ReactDOM from 'react-dom';
-import './game.css';
+import './css/game.css';
 
 class Board extends React.Component {
   renderSquare(i) {
@@ -155,7 +155,7 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <ol>{this.prev_btn(this.state.stepNumber)}</ol>
-          <ol>{this.next_btn(this.state.stepNumber)}</ol>
+          {/* <ol>{this.next_btn(this.state.stepNumber)}</ol> */}
           <ol>{moves}</ol>
         </div>
       </div>

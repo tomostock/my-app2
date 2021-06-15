@@ -54,6 +54,7 @@ ol, ul {
 }
 .game-cap {
   font-size: 35px;
+  text-align: center;
   margin-bottom: 20px;
 }
 .highlight-color {

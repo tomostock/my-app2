@@ -41,7 +41,7 @@ form {
   display: grid;
 }
 .auth {
-  width: 50%;
+  width: 100%;
 }
 .MuiFormControl-root {
   margin-bottom: 15px!important;

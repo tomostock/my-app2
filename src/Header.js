@@ -12,7 +12,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Nav from './Nav';
 import MenuList from '@material-ui/core/MenuList';
 import { app } from "./base";
-import SignOut from "./auth/SignOut";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
   list: {
     width: 250,
     backgroundColor: '#424242',
+  },
+  link: {
+    textDecorationLine: 'none',
+    color: 'inherit',
   },
 }));
 
@@ -113,8 +117,12 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={() => SignOut()}>Logout</MenuItem>
+                <Link to="/myaccount"className={classes.link}>
+                  <MenuItem>My account</MenuItem>
+                </Link>
+                <Link to="/logout" className={classes.link}>
+                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                </Link>
               </Menu>
             </div>
           )}

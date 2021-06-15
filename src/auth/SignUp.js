@@ -14,7 +14,7 @@ const SignUp = ({ history }) => {
   };
 
   return (
-    <div>
+    <div className="formContainer">
       <h1>Sign up</h1>
       <form onSubmit={handleSubmit}>
         <FormControl>

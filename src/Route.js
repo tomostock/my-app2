@@ -7,9 +7,11 @@ import App from './App';
 import Profile from './Profile';
 import DemoAutoPlay from './Swipe';
 import Game from './Game';
+import MyAccount from './MyAccount';
+import Contact from './Contact';
 import Footer from './Footer';
 import SignUp from "./auth/SignUp";
-
+import LogOut from "./auth/LogOut";
 
 class Routes extends React.Component {
   render() {
@@ -22,9 +24,12 @@ class Routes extends React.Component {
           <div className='contents'>
             <Route exact path='/' component={App}/>
             <Route path='/Profile' component={Profile}/>
-            <Route path='/Swipe' component={DemoAutoPlay}/>
             <PrivateRoute path='/Game' component={Game}/>
+            <PrivateRoute path='/Swipe' component={DemoAutoPlay}/>
+            <PrivateRoute path='/MyAccount' component={MyAccount}/>
+            <Route path='/Contact' component={Contact}/>
             <Route exact path="/signup" component={SignUp} />
+            <Route path='/logout' component={LogOut}/>
           </div>
           <Footer />
         </Router>

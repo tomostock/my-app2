@@ -14,8 +14,7 @@ const Login = ({ history }) => {
     login(email.value, password.value, history);
   };
   return (
-    <div>
-      <h1>Log in</h1>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <FormControl>
           <InputLabel>

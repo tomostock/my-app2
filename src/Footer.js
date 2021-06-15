@@ -1,7 +1,6 @@
 import React from 'react';
 import { Fnav } from './Nav';
 import MenuList from '@material-ui/core/MenuList';
-// import logo from './logo192.png';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -10,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: 0,
     width: '100%',
+    height: '56px',
   },
   inner: {
     display: 'flex',
