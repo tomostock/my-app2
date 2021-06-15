@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from './Nav';
+import { Fnav } from './Nav';
 import MenuList from '@material-ui/core/MenuList';
 // import logo from './logo192.png';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,6 +7,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.primary.light,
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
   },
   inner: {
     display: 'flex',
@@ -35,7 +38,7 @@ function Footer() {
     <div className={classes.root}>
       <div className={classes.inner}>
         <MenuList onClick={scrollToTopOnMount} className='footer'>
-          <Nav />
+          <Fnav />
         </MenuList>
       </div>
     </div>

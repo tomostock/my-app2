@@ -12,6 +12,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Nav from './Nav';
 import MenuList from '@material-ui/core/MenuList';
 import { app } from "./base";
+import SignOut from "./auth/SignOut";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -112,8 +113,8 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={() => SignOut()}>Logout</MenuItem>
               </Menu>
             </div>
           )}
