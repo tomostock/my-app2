@@ -43,7 +43,7 @@ ol, ul {
 
 .game {
   display: flex; 
-  min-height: 80vh;
+  min-height: 84vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;

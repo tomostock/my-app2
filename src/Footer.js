@@ -38,9 +38,6 @@ function Footer() {
           <Nav />
         </MenuList>
       </div>
-      <div className={classes.logo}>
-        {/* <img src={logo} alt="logo" width="50px" /> */}
-      </div>
     </div>
   );
 }
