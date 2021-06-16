@@ -118,7 +118,7 @@ export default function MenuAppBar() {
                 onClose={handleClose}
               >
                 <Link to="/myaccount"className={classes.link}>
-                  <MenuItem>My account</MenuItem>
+                  <MenuItem onClick={handleClose}>My account</MenuItem>
                 </Link>
                 <Link to="/logout" className={classes.link}>
                   <MenuItem onClick={handleClose}>Logout</MenuItem>
