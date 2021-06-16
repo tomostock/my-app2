@@ -64,7 +64,7 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <React.Fragment key={'left'}>
             <IconButton onClick={toggleDrawer('left', true)} 

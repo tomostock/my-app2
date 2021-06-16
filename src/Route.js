@@ -12,6 +12,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import SignUp from "./auth/SignUp";
 import LogOut from "./auth/LogOut";
+import Send from "./Send";
 
 class Routes extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class Routes extends React.Component {
             <PrivateRoute path='/Swipe' component={DemoAutoPlay}/>
             <PrivateRoute path='/MyAccount' component={MyAccount}/>
             <Route path='/Contact' component={Contact}/>
+            <Route path='/Send' component={Send}/>
             <Route exact path="/signup" component={SignUp} />
             <Route path='/logout' component={LogOut}/>
           </div>

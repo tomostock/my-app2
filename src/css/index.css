@@ -11,7 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.contents {
+  margin-top: 56px;
+}
 .MuiDrawer-paper {
   background-color: #424242!important;
 }

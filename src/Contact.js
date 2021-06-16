@@ -2,6 +2,7 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import Button from '@material-ui/core/Button';
 import { FormControl, InputLabel, Input, TextField } from '@material-ui/core';
+import { createHashHistory } from "history";
 
 export default function Contact() {
   function sendEmail(e) {
@@ -10,6 +11,8 @@ export default function Contact() {
     emailjs.sendForm('service_2kci3ph', 'template_3bezrgm', e.target, 'user_Vk8nUBq1NqqxNXtLLROy0')
       .then((result) => {
         alert(result.text);
+        const history = createHashHistory();
+        history.go();
       }, (error) => {
         alert(error.text);
       });
