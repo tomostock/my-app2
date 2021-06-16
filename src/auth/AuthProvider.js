@@ -8,10 +8,9 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   // ユーザーをログインさせる関数
-  const login = async (email, password, history) => {
+  const login = async (email, password) => {
     try {
       await app.auth().signInWithEmailAndPassword(email, password);
-      history.push("/");
     } catch (error) {
       alert(error);
     }

@@ -7,15 +7,15 @@ import { FormControl, InputLabel, Input } from '@material-ui/core';
 const Login = ({ history }) => {
   const { login } = useContext(AuthContext);
 
-  // AuthContextからlogin関数を受け取る
   const handleSubmit = event => {
     event.preventDefault();
     const { email, password } = event.target.elements;
-    login(email.value, password.value, history);
+    login(email.value, password.value, history.location);
   };
   return (
     <div className="formContainer">
       <form onSubmit={handleSubmit}>
+        <h1>Log In</h1>
         <FormControl>
           <InputLabel>
             Email

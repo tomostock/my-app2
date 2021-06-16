@@ -15,8 +15,16 @@ const useStyles = makeStyles({
     color: 'white',
   },
   listItem: {
+    minHeight: '50px',
+    color: 'white',
+  },
+  flistItem: {
     minHeight: '36px',
     color: 'white',
+    width: '75px',
+    display: 'grid',
+    justifyContent: 'center',
+    textAlign: '-webkit-center',
   }
 
 });
@@ -26,19 +34,19 @@ function Nav() {
   return (
     <div className="flex">
       <Link to="/"className={classes.link}>
-        <MenuItem className={classes.listItem}>Top</MenuItem>
+        <MenuItem className={classes.listItem}><HomeIcon />　TOP</MenuItem>
       </Link>
       <Link to="/Profile"className={classes.link}>
-        <MenuItem className={classes.listItem}>Profile</MenuItem>
+        <MenuItem className={classes.listItem}><AssignmentIndIcon />　PROFILE</MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
-        <MenuItem className={classes.listItem}>Game</MenuItem>
+        <MenuItem className={classes.listItem}><GamepadIcon />　GAME</MenuItem>
       </Link>
       <Link to="/Swipe"className={classes.link}>
-        <MenuItem className={classes.listItem}>Photo</MenuItem>
+        <MenuItem className={classes.listItem}><PhotoIcon />　PHOTO</MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
-        <MenuItem className={classes.listItem}>Mail</MenuItem>
+        <MenuItem className={classes.listItem}><MailIcon />　MAIL</MenuItem>
       </Link>
     </div>
   );
@@ -48,20 +56,29 @@ export function Fnav() {
   const classes = useStyles();
   return (
     <div className="flex">
-      <Link to="/"className={classes.link}>
-        <MenuItem className={classes.listItem}><HomeIcon /></MenuItem>
-      </Link>
       <Link to="/Profile"className={classes.link}>
-        <MenuItem className={classes.listItem}><AssignmentIndIcon /></MenuItem>
+        <MenuItem className={classes.flistItem}>
+          <AssignmentIndIcon />
+          <div className="fnavName">PROFILE</div>
+        </MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
-        <MenuItem className={classes.listItem}><GamepadIcon /></MenuItem>
+        <MenuItem className={classes.flistItem}>
+          <GamepadIcon />
+          <div className="fnavName">GAME</div>
+        </MenuItem>
       </Link>
       <Link to="/Swipe"className={classes.link}>
-        <MenuItem className={classes.listItem}><PhotoIcon /></MenuItem>
+        <MenuItem className={classes.flistItem}>
+          <PhotoIcon />
+          <div className="fnavName">PHOTO</div>
+        </MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
-        <MenuItem className={classes.listItem}><MailIcon /></MenuItem>
+        <MenuItem className={classes.flistItem}>
+          <MailIcon />
+          <div className="fnavName">MAIL</div>
+        </MenuItem>
       </Link>
     </div>
   );

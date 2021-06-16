@@ -1,21 +1,15 @@
-// import React from "react";
 import { app } from "../base";
 import Button from '@material-ui/core/Button';
-// import { AuthProvider } from "./auth/AuthProvider";
 
 const LogOut = () => {
+  app.auth().signOut().then(function() {
+    var unsubscribe = app.auth().onAuthStateChanged(() => {
+      unsubscribe();
+    });
+  }).catch(function(error) {
+    alert(error);
+  });
 
-  app.auth().signOut();
-  // React.useEffect(() => {
-
-  // }, []);
-  // useEffect(() => {
-  //   const subscription = props.source.subscribe();
-  //   return () => {
-  //     // Clean up the subscription
-  //     subscription.unsubscribe();
-  //   };
-  // });
   return (
     <div className="formContainer">
       <h1>Bye</h1>

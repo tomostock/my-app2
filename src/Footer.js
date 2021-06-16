@@ -20,10 +20,6 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
     }
 
-  },
-  logo: {
-    padding: '20px',
-    textAlign: 'right',
   }
 
 }));
