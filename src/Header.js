@@ -117,12 +117,12 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <Link to="/myaccount"className={classes.link}>
+                <a href="/myaccount"className={classes.link}>
                   <MenuItem onClick={handleClose}>My account</MenuItem>
-                </Link>
-                <Link to="/logout" className={classes.link}>
+                </a>
+                <a href="/logout" className={classes.link}>
                   <MenuItem onClick={handleClose}>Logout</MenuItem>
-                </Link>
+                </a>
               </Menu>
             </div>
           )}

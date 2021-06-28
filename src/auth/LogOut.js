@@ -4,6 +4,7 @@ import React from "react";
 
 const LogOut = () => {
   app.auth().signOut().then(function() {
+    // const [currentUser, setCurrentUser] = useState(null);
     var unsubscribe = app.auth().onAuthStateChanged(() => {
       unsubscribe();
       localStorage.clear();
