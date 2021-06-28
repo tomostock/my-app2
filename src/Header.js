@@ -12,7 +12,6 @@ import Drawer from '@material-ui/core/Drawer';
 import Nav from './Nav';
 import MenuList from '@material-ui/core/MenuList';
 import { app } from "./base";
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
