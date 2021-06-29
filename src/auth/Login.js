@@ -6,10 +6,10 @@ import { FormControl, InputLabel, Input } from '@material-ui/core';
 
 const Login = ({ history }) => {
   const { login } = useContext(AuthContext);
-
   const handleSubmit = event => {
     event.preventDefault();
     const { email, password } = event.target.elements;
+    console.log("login");
     login(email.value, password.value, history.location);
   };
   return (
