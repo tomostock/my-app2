@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page snapshot testing 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <div
+      className="auth"
+    >
+      <div
+        className="formContainer"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <h1>
+            Log In
+          </h1>
+          <div
+            className="MuiFormControl-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink={false}
+            >
+              Email
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                className="MuiInputBase-input MuiInput-input"
+                disabled={false}
+                name="email"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                placeholder="Email"
+                required={false}
+                type="email"
+              />
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink={false}
+            >
+              Password
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                className="MuiInputBase-input MuiInput-input"
+                disabled={false}
+                name="password"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                placeholder="Password"
+                required={false}
+                type="password"
+              />
+            </div>
+          </div>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            disabled={false}
+            onBlur={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="submit"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              Log in
+            </span>
+          </button>
+        </form>
+      </div>
+      <a
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+        href="/signup"
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="MuiButton-label"
+        >
+          signup
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
