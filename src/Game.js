@@ -76,14 +76,6 @@ class Game extends React.Component {
     })
   }
 
-  jumpToNext(step) {
-    this.setState({
-      stepNumber: step,
-      oIsNext: (step % 2) === 0,
-      prevCount: this.state.prevCount - 1
-    })
-  }
-
   prev_btn(stepNumber) {
     if( this.state.stepNumber > 0 && this.state.stepNumber < 9 ) {
       return(
@@ -94,20 +86,6 @@ class Game extends React.Component {
     } else {
       return(
         <Button variant="contained" color="primary" className="button"　disabled>◀︎</Button>
-      );
-    }
-  }
-
-  next_btn(stepNumber) {
-    if( this.state.stepNumber < 9 && this.state.prevCount > 1 ) {
-      return(
-        <Button variant="contained" color="primary" onClick={() => this.jumpToNext(stepNumber+1)} className="button">
-          ▶︎
-        </Button>
-      );        
-    } else {
-      return(
-        <Button variant="contained" color="primary" className="button"　disabled>▶︎</Button>
       );
     }
   }
