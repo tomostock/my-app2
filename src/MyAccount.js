@@ -1,6 +1,7 @@
 import React from 'react';
 import { app } from "./base.js";
 
+
 export default function MyAccount() {
   const user = app.auth().currentUser;
   return (

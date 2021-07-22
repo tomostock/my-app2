@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import ReactDOM from 'react-dom';
 import './css/game.css';
+import Sbtn from './sound/button.mp3'
 
 class Board extends React.Component {
   renderSquare(i) {
@@ -51,6 +52,9 @@ class Game extends React.Component {
   }
 
   handleClick(i) {
+    const audio = new Audio(Sbtn);
+    audio.play();
+    alert("test");
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -110,6 +114,8 @@ class Game extends React.Component {
     
     let status;
     let winLine = [];
+    // alert("test");
+
     if (winner) {
       status = 'Winner: ' + winner.player;
       winLine = winner.line;
