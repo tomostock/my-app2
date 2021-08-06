@@ -28,6 +28,7 @@ ol, ul {
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
+  padding-top: 10px;
   text-align: center;
   width: 100px;
 }
@@ -50,10 +51,20 @@ ol, ul {
 .game-info {
   display: flex;
 }
+#cap {
+  display: none;
+}
 .game-cap {
   font-size: 35px;
   text-align: center;
-  margin-bottom: 20px;
+  position: absolute;
+  margin: auto;
+  margin-top: 103px;
+  padding: 43px;
+  background:rgba(255,0,0,0.3);
+  border-radius: 15px;
+  color: white;
+  width: 211px;
 }
 .highlight-color {
   background: #90ee90;
@@ -84,4 +95,36 @@ ol, ul {
   color: #ffffff;
   line-height: 1em;
   border: none;
+}
+
+#overlay{
+  position: fixed;
+  top:0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.6);
+  transition: all 0.5s ease-out;
+}
+#overlay.overlay-on{
+  visibility: visible;
+  opacity: 1;
+}
+
+#box_wrap{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#message_box{
+  margin-top: 103px;
+  padding: 43px;
+  background:rgba(255,0,0,0.6);
+  border-radius: 15px;
+  color: white;
+  width: 211px;
+  text-align: center;
 }

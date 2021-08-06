@@ -2,13 +2,19 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import ReactDOM from 'react-dom';
 import './css/game.css';
-import Sbtn from './sound/button.mp3'
+import SBtn from './sound/button.mp3'
+import Pb from './img/piece_b.png'
+import Pw from './img/piece_w.png'
 
 class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
-        value={this.props.squares[i]}
+        value={
+          this.props.squares[i] ? 
+            this.props.squares[i] === 'o' ? <img src={Pb} width="60" alt="black"/> : <img src={Pw} width="60" alt="white"/> 
+            : ''
+        }
         onClick={() => this.props.onClick(i)}
         isHighlight={ this.props.winLine.includes(i) }
         key={i}
@@ -52,16 +58,17 @@ class Game extends React.Component {
   }
 
   handleClick(i) {
-    const audio = new Audio(Sbtn);
+    const audio = new Audio(SBtn);
     audio.play();
-    alert("test");
+    alarm();
+
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.oIsNext ? 'O' : 'X';
+    squares[i] = this.state.oIsNext ? 'o' : 'x';
     this.setState({
       history: history.concat([{
         squares: squares
@@ -73,6 +80,8 @@ class Game extends React.Component {
   }
 
   jumpTo(step) {
+    document.getElementById("cap").style.display ="none";
+    document.getElementById("overlay").style.display ="block";
     this.setState({
       stepNumber: step,
       oIsNext: (step % 2) === 0,
@@ -114,23 +123,26 @@ class Game extends React.Component {
     
     let status;
     let winLine = [];
-    // alert("test");
 
     if (winner) {
-      status = 'Winner: ' + winner.player;
+      status = winner.player === 'o' ? 'WINNER:BLACK' : 'WINNER:WHITE';
       winLine = winner.line;
+      document.getElementById("overlay").style.display ="none";
+      document.getElementById("cap").style.display ="block";
     } else {
-      status = 'Next player: ' + (this.state.oIsNext ? 'O' : 'X');
+      status = 'Next: ' + (this.state.oIsNext ? 'BLACK' : 'WHITE');
       if( this.state.stepNumber === 9) {
         status = "Draw";
         winLine = [0,1,2,3,4,5,6,7,8]
+        document.getElementById("overlay").style.display ="none";
+        document.getElementById("cap").style.display ="block";
       }
     }
     
     return (
       <div className="game">
         <div className="game-board">
-          <div className="game-cap">{status}</div>
+          <div id="cap" className="game-cap">{status}</div>
           <Board
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
@@ -139,9 +151,18 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <ol>{this.prev_btn(this.state.stepNumber)}</ol>
-          {/* <ol>{this.next_btn(this.state.stepNumber)}</ol> */}
           <ol>{moves}</ol>
         </div>
+
+        <div id="overlay">
+          <div id="box_wrap">
+            <div id="message_box">
+              <p>{status}</p>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     );
   }
@@ -184,3 +205,15 @@ function calculateWinner(squares) {
   }
   return null;
 }
+
+function alarm() {
+  const overlay = document.getElementById("overlay");
+  overlay.classList.toggle('overlay-on');
+  setTimeout(function() {
+    overlay.classList.toggle('overlay-on');
+  }, 1500);
+}
+
+
+
+
