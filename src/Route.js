@@ -5,7 +5,7 @@ import PrivateRoute from "./auth/PrivateRoute";
 import Header from './Header';
 import App from './App';
 import Profile from './Profile';
-import DemoAutoPlay from './Swipe';
+import Book from './Book';
 import Game from './Game';
 import MyAccount from './MyAccount';
 import Contact from './Contact';
@@ -26,7 +26,7 @@ class Routes extends React.Component {
             <Route exact path='/' component={App}/>
             <Route path='/Profile' component={Profile}/>
             <PrivateRoute path='/Game' component={Game}/>
-            <PrivateRoute path='/Swipe' component={DemoAutoPlay}/>
+            <PrivateRoute path='/Book' component={Book}/>
             <PrivateRoute path='/MyAccount' component={MyAccount}/>
             <Route path='/Contact' component={Contact}/>
             <Route path='/Send' component={Send}/>

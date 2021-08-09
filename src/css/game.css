@@ -128,3 +128,11 @@ ol, ul {
   width: 211px;
   text-align: center;
 }
+
+#tittle {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: aquamarine;
+  z-index: 100;
+}

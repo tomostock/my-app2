@@ -5,9 +5,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
 import GamepadIcon from '@material-ui/icons/Gamepad';
-import PhotoIcon from '@material-ui/icons/Photo';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import HomeIcon from '@material-ui/icons/Home';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 const useStyles = makeStyles({
   link: {
@@ -42,8 +42,8 @@ function Nav() {
       <Link to="/Game"className={classes.link}>
         <MenuItem className={classes.listItem}><GamepadIcon />　GAME</MenuItem>
       </Link>
-      <Link to="/Swipe"className={classes.link}>
-        <MenuItem className={classes.listItem}><PhotoIcon />　PHOTO</MenuItem>
+      <Link to="/Book"className={classes.link}>
+        <MenuItem className={classes.listItem}><MenuBookIcon />　LYLIC</MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
         <MenuItem className={classes.listItem}><MailIcon />　MAIL</MenuItem>
@@ -68,10 +68,10 @@ export function Fnav() {
           <div className="fnavName">GAME</div>
         </MenuItem>
       </Link>
-      <Link to="/Swipe"className={classes.link}>
+      <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.flistItem}>
-          <PhotoIcon />
-          <div className="fnavName">PHOTO</div>
+          <MenuBookIcon />
+          <div className="fnavName">LYLIC</div>
         </MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>

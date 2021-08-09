@@ -11,25 +11,36 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 function rotateLasers() {
-  if(document.getElementById("box_er")) {
+  if(document.getElementById("box_err")) {
     return
   }
   var aElement = document.getElementById("box");
   aElement.id = "box2";
   setTimeout(function(){
     var aElement = document.getElementById("box2");
-    aElement.id = "box_er";
+    aElement.id = "box_err";
     document.getElementById("lou").style.display ="none";
-    document.getElementById("lou2").style.display ="block";
-  }, 3000);
+    setTimeout(function(){
+      var new_element = document.createElement('p');
+      new_element.id = "message";
+      new_element.textContent = 'Bow Wow!!';
+      aElement.appendChild(new_element);
+      // document.getElementById("message").style.display ="block";
+    }, 1);
+    setTimeout(function(){
+      document.getElementById("lou2").style.display ="block";
+    }, 2000);
+  }, 4000);
 }
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <span id="box" onClick={rotateLasers} ><img id="lou" src={lou} width="250" alt="lou"/></span>
-        <img id="lou2" src={lou2} width="250" alt="lou2"/>
+        <span id="box" onClick={rotateLasers} >
+          <img id="lou" src={lou} width="300" alt="lou"/>
+          <img id="lou2" src={lou2} width="300" alt="lou2"/>
+        </span>
         <div className="auth">
           <AuthProvider>
             <Router>

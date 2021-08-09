@@ -1,0 +1,23 @@
+.stf__item {
+  background-color: beige;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  line-height: 2;
+  font-size: 15px;
+  font-family: "Kokoro";
+}
+.page {
+  border: 1px solid #dcdcdc;
+}
+
+.pageNum {
+  font-size: 8px;
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  right: 4px;  
+}
+
+h3 {
+  font-size: 24px;
+}

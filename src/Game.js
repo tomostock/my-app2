@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import ReactDOM from 'react-dom';
 import './css/game.css';
 import SBtn from './sound/button.mp3'
+import SDrum from './sound/drum.mp3'
 import Pb from './img/piece_b.png'
 import Pw from './img/piece_w.png'
 
@@ -61,7 +62,7 @@ class Game extends React.Component {
     const audio = new Audio(SBtn);
     audio.play();
     alarm();
-
+    
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -104,6 +105,7 @@ class Game extends React.Component {
   }
 
   render() {
+    tittle();
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
@@ -129,6 +131,8 @@ class Game extends React.Component {
       winLine = winner.line;
       document.getElementById("overlay").style.display ="none";
       document.getElementById("cap").style.display ="block";
+      const audio = new Audio(SDrum);
+      audio.play();
     } else {
       status = 'Next: ' + (this.state.oIsNext ? 'BLACK' : 'WHITE');
       if( this.state.stepNumber === 9) {
@@ -141,6 +145,9 @@ class Game extends React.Component {
     
     return (
       <div className="game">
+        <div id="tittle">
+          BLACK || WHITE
+        </div>
         <div className="game-board">
           <div id="cap" className="game-cap">{status}</div>
           <Board
@@ -161,8 +168,6 @@ class Game extends React.Component {
             </div>
           </div>
         </div>
-
-
       </div>
     );
   }
@@ -214,6 +219,6 @@ function alarm() {
   }, 1500);
 }
 
-
-
-
+function tittle() {
+  alert("tittle");
+}

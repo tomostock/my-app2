@@ -13,7 +13,11 @@ code {
     monospace;
 }
 .contents {
-  margin: 56px 0 -56px 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .MuiDrawer-paper {
   background-color: #424242!important;
