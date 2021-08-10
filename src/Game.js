@@ -105,7 +105,6 @@ class Game extends React.Component {
   }
 
   render() {
-    tittle();
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
@@ -145,9 +144,7 @@ class Game extends React.Component {
     
     return (
       <div className="game">
-        <div id="tittle">
-          BLACK || WHITE
-        </div>
+        <Tittle />
         <div className="game-board">
           <div id="cap" className="game-cap">{status}</div>
           <Board
@@ -173,6 +170,17 @@ class Game extends React.Component {
   }
 }
 export default Game;
+
+class Tittle extends React.Component {
+  render() {
+    tittlealarm()
+    return (
+      <div id="tittle">
+        BLACK || WHITE
+      </div>
+    );
+  }
+}
 // ========================================
 
 ReactDOM.render(
@@ -210,7 +218,11 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
+function tittlealarm() {
+  setTimeout(function() {
+    document.getElementById("tittle").style.display ="none";
+  }, 5000); 
+}
 function alarm() {
   const overlay = document.getElementById("overlay");
   overlay.classList.toggle('overlay-on');
@@ -219,6 +231,3 @@ function alarm() {
   }, 1500);
 }
 
-function tittle() {
-  alert("tittle");
-}
