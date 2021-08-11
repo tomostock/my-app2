@@ -137,12 +137,12 @@ ol, ul {
   background: aquamarine;
   z-index: 100;
   padding-top: 200px;
+  text-align: center;
 }
 
 #tittle .progress{
   animation: flash 1s linear infinite;
   margin:20px;
-  text-align: center;
   color: #1e90ff;
 }
 
@@ -150,12 +150,9 @@ ol, ul {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
-  
-  
   100% {
     opacity: 1;
   }

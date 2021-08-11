@@ -10,7 +10,7 @@ function Book(props) {
             <br />
                 <h3>不思議な少年</h3>
                 <img src={boy} width="200" alt="boy"/>
-                <p class="pageNum">0/5</p>
+                <p className="pageNum">0/5</p>
             </div>
             <div className="Page">
                 <br /><br />
@@ -22,7 +22,7 @@ function Book(props) {
                 そこへ腰を下し<br />
                 気がつくと目の前には<br />
                 見たことのない不思議な少年が
-                <p class="pageNum">1/5</p>
+                <p className="pageNum">1/5</p>
             </div>
             <div className="Page">
                 <br /><br />
@@ -34,7 +34,7 @@ function Book(props) {
                 見てみなほら笑顔さ<br />
                 僕らは思い通りに<br />
                 まるでこの村の神様みたいだろ
-                <p class="pageNum">2/5</p>
+                <p className="pageNum">2/5</p>
             </div>
             <div className="Page">
                 <br /><br />
@@ -46,7 +46,7 @@ function Book(props) {
                 村の様子は寂しげで<br />
                 いつのまにかここは<br />
                 僕らしかいない二人の世界に
-                <p class="pageNum">3/5</p>
+                <p className="pageNum">3/5</p>
             </div>
             <div className="Page">
                 <br /><br />
@@ -58,13 +58,13 @@ function Book(props) {
                 君はここにいるのかい？<br />
                 僕はまぶたを閉じて<br />
                 元の世界と繰り返し祈り続けた
-                <p class="pageNum">4/5</p>
+                <p className="pageNum">4/5</p>
             </div>
             <div className="Page">
                 <br /><br />
                 目が覚めた先に見える<br />
                 もとの世界の村の路地裏
-                <p class="pageNum">5/5</p>
+                <p className="pageNum">5/5</p>
             </div>
         </HTMLFlipBook>
     );

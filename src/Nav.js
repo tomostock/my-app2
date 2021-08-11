@@ -26,8 +26,10 @@ const useStyles = makeStyles({
     display: 'grid',
     justifyContent: 'center',
     textAlign: '-webkit-center',
+  },
+  icon: {
+    fontSize: 36,
   }
-
 });
 
 function Nav() {
@@ -47,7 +49,7 @@ function Nav() {
         <MenuItem className={classes.listItem}><MenuBookIcon />　LYLIC</MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
-        <MenuItem className={classes.listItem}><MailIcon />　MAIL</MenuItem>
+        <MenuItem className={classes.listItem}><MailIcon style={{ fontSize: 100 }}/>　MAIL</MenuItem>
       </Link>
     </div>
   );
@@ -59,25 +61,25 @@ export function Fnav() {
     <div className="flex">
       <Link to="/Profile"className={classes.link}>
         <MenuItem className={classes.flistItem}>
-          <AssignmentIndIcon />
+          <AssignmentIndIcon className={classes.icon} />
           <div className="fnavName">PROFILE</div>
         </MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
         <MenuItem className={classes.flistItem} onClick={TittleAlarm}>
-          <GamepadIcon />
+          <GamepadIcon className={classes.icon} />
           <div className="fnavName">GAME</div>
         </MenuItem>
       </Link>
       <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.flistItem}>
-          <MenuBookIcon />
+          <MenuBookIcon className={classes.icon} />
           <div className="fnavName">LYLIC</div>
         </MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
         <MenuItem className={classes.flistItem}>
-          <MailIcon />
+          <MailIcon className={classes.icon} />
           <div className="fnavName">MAIL</div>
         </MenuItem>
       </Link>
