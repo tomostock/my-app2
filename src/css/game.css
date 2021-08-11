@@ -138,3 +138,25 @@ ol, ul {
   z-index: 100;
   padding-top: 200px;
 }
+
+#tittle .progress{
+  animation: flash 1s linear infinite;
+  margin:20px;
+  text-align: center;
+  color: #1e90ff;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  
+  
+  100% {
+    opacity: 1;
+  }
+}

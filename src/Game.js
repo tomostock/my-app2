@@ -173,10 +173,11 @@ export default Game;
 
 class Tittle extends React.Component {
   render() {
-    tittlealarm()
+//検証    tittlealarm()
     return (
       <div id="tittle">
-        BLACK || WHITE
+        <h2>BLACK || WHITE</h2>
+        <div className="progress">●</div>
       </div>
     );
   }
@@ -218,11 +219,13 @@ function calculateWinner(squares) {
   }
   return null;
 }
-function tittlealarm() {
+
+export function TittleAlarm() {
   setTimeout(function() {
     document.getElementById("tittle").style.display ="none";
   }, 5000); 
 }
+
 function alarm() {
   const overlay = document.getElementById("overlay");
   overlay.classList.toggle('overlay-on');

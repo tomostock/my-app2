@@ -8,6 +8,7 @@ import GamepadIcon from '@material-ui/icons/Gamepad';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import HomeIcon from '@material-ui/icons/Home';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import { TittleAlarm } from './Game';
 
 const useStyles = makeStyles({
   link: {
@@ -40,7 +41,7 @@ function Nav() {
         <MenuItem className={classes.listItem}><AssignmentIndIcon />　PROFILE</MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
-        <MenuItem className={classes.listItem}><GamepadIcon />　GAME</MenuItem>
+        <MenuItem className={classes.listItem} onClick={TittleAlarm}><GamepadIcon />　GAME</MenuItem>
       </Link>
       <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.listItem}><MenuBookIcon />　LYLIC</MenuItem>
@@ -63,7 +64,7 @@ export function Fnav() {
         </MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
-        <MenuItem className={classes.flistItem}>
+        <MenuItem className={classes.flistItem} onClick={TittleAlarm}>
           <GamepadIcon />
           <div className="fnavName">GAME</div>
         </MenuItem>
