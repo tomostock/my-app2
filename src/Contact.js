@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import Button from '@material-ui/core/Button';
+import './css/contact.css';
 import { FormControl, InputLabel, Input, TextField } from '@material-ui/core';
 import { createHashHistory } from "history";
 
@@ -19,33 +20,35 @@ export default function Contact() {
   }
 
   return (
-    <div className="formContainer">
-      <h1>Contact</h1>
-      <form className="contact-form" onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number" />
-        <FormControl>
-          <InputLabel>
-            Name
-          </InputLabel>
-          <Input name="user_name" type="text" placeholder="name" />
-        </FormControl>
-        <FormControl>
-          <InputLabel>
-            Email
-          </InputLabel>
-          <Input name="user_email" type="email" placeholder="email" />
-        </FormControl>
-        <FormControl>
-          <TextField
-            id="filled-multiline-static"
-            label="message"
-            multiline
-            rows={4}
-            name="message"
-          />
-        </FormControl>
-        <Button variant="contained" color="primary" type="submit">Send</Button>
-      </form>
+    <div className="contact">
+      <div className="formContainer">
+        <h1>Contact</h1>
+        <form className="contact-form" onSubmit={sendEmail}>
+          <input type="hidden" name="contact_number" />
+          <FormControl>
+            <InputLabel>
+              Name
+            </InputLabel>
+            <Input name="user_name" type="text" placeholder="name" />
+          </FormControl>
+          <FormControl>
+            <InputLabel>
+              Email
+            </InputLabel>
+            <Input name="user_email" type="email" placeholder="email" />
+          </FormControl>
+          <FormControl>
+            <TextField
+              id="filled-multiline-static"
+              label="message"
+              multiline
+              rows={4}
+              name="message"
+            />
+          </FormControl>
+          <Button variant="contained" color="primary" type="submit">Send</Button>
+        </form>
+      </div>
     </div>
   );
 }

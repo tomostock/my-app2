@@ -72,7 +72,7 @@ export default function MenuAppBar() {
               color="inherit" 
               aria-label="menu"
             >
-              <MenuIcon />
+              <MenuIcon style={{ fontSize: 30 }}/>
             </IconButton>
             <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
               <div
@@ -87,9 +87,7 @@ export default function MenuAppBar() {
               </div>
             </Drawer>
           </React.Fragment>
-          <Typography variant="h6" className={classes.title}>
-            Portfolio
-          </Typography>
+          <Typography variant="h6" className={classes.title} />
           {loginEl && (
             <div>
               <IconButton
@@ -99,7 +97,7 @@ export default function MenuAppBar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle style={{ fontSize: 30 }}/>
               </IconButton>
               <Menu
                 id="menu-appbar"

@@ -1,5 +1,7 @@
-body {
+.game {
   background-color: #fff;
+  width: 100%;
+  padding-bottom: 68px;
 }
 
 ol, ul {
@@ -16,10 +18,11 @@ ol, ul {
 .status {
   margin-bottom: 10px;
 }
-
+.game-board {
+  background-image: url("../img/wood.jpg");
+}
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  border: 1px solid #000;
   float: left;
   font-size: 50px;
   font-weight: bold;
@@ -31,6 +34,7 @@ ol, ul {
   padding-top: 10px;
   text-align: center;
   width: 100px;
+  background: none;
 }
 
 .square:focus {

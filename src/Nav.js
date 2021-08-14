@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,7 +8,8 @@ import GamepadIcon from '@material-ui/icons/Gamepad';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import HomeIcon from '@material-ui/icons/Home';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import { TittleAlarm } from './Game';
+import { AuthContext } from "./auth/AuthProvider";
+import { TittleAlarm } from "./Game";
 
 const useStyles = makeStyles({
   link: {
@@ -32,8 +33,13 @@ const useStyles = makeStyles({
   }
 });
 
+function GameTittle() {
+  TittleAlarm();
+}
+
 function Nav() {
   const classes = useStyles();
+  const { currentUser } = useContext(AuthContext);
   return (
     <div className="flex">
       <Link to="/"className={classes.link}>
@@ -43,13 +49,15 @@ function Nav() {
         <MenuItem className={classes.listItem}><AssignmentIndIcon />　PROFILE</MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
-        <MenuItem className={classes.listItem} onClick={TittleAlarm}><GamepadIcon />　GAME</MenuItem>
+        { currentUser ? 
+          <MenuItem className={classes.listItem} onClick={GameTittle}><GamepadIcon />　GAME</MenuItem> 
+          : <MenuItem className={classes.listItem} ><GamepadIcon />　GAME</MenuItem> }
       </Link>
       <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.listItem}><MenuBookIcon />　LYLIC</MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
-        <MenuItem className={classes.listItem}><MailIcon style={{ fontSize: 100 }}/>　MAIL</MenuItem>
+        <MenuItem className={classes.listItem}><MailIcon />　MAIL</MenuItem>
       </Link>
     </div>
   );
@@ -57,6 +65,7 @@ function Nav() {
 
 export function Fnav() {
   const classes = useStyles();
+  const { currentUser } = useContext(AuthContext);
   return (
     <div className="flex">
       <Link to="/Profile"className={classes.link}>
@@ -66,10 +75,15 @@ export function Fnav() {
         </MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
-        <MenuItem className={classes.flistItem} onClick={TittleAlarm}>
+      { currentUser ? 
+        <MenuItem className={classes.flistItem} onClick={GameTittle}>
+          <GamepadIcon className={classes.icon} />
+            <div className="fnavName">GAME</div>
+        </MenuItem> :
+        <MenuItem className={classes.flistItem} > 
           <GamepadIcon className={classes.icon} />
           <div className="fnavName">GAME</div>
-        </MenuItem>
+        </MenuItem> }
       </Link>
       <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.flistItem}>

@@ -15,6 +15,18 @@ export default function Profile() {
       <h2>about me</h2>
       <p>Name: Tomomi Suzuki</p>
       <p>Mail: tomos.tomomi@gmail.com</p>
+
+      <h2>about me</h2>
+      <p>Name: Tomomi Suzuki</p>
+      <p>Mail: tomos.tomomi@gmail.com</p>
+      <p>Name: Tomomi Suzuki</p>
+      <p>Mail: tomos.tomomi@gmail.com</p>
+      <p>Name: Tomomi Suzuki</p>
+      <p>Mail: tomos.tomomi@gmail.com</p>
+      <p>Name: Tomomi Suzuki</p>
+      <p>Mail: tomos.tomomi@gmail.com</p>
+      <p>Name: Tomomi Suzuki</p>
+      <p>Mail: tomos.tomomi@gmail.com</p>
     </div>
   );
 }
