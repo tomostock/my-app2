@@ -90,7 +90,7 @@ export default function App() {
         {currentUser ? (<div className="nullBtn" />) : (
           <div>
           <Button variant="contained" color="primary" type="submit" onClick={handleOpen} id="loginBtn">
-            Login
+            Login or Signup
           </Button>
           <Modal
             aria-labelledby="transition-modal-title"
