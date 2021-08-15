@@ -9,9 +9,12 @@ export default function MyAccount() {
     <div className="MyAccount">
       <h1>My Account</h1>
       <div>
-        Email: {user.email}<br />
-        Last Sign In: {user.metadata.lastSignInTime}<br />
-        Create Date: {user.metadata.creationTime}
+        Email: <br />
+        {user.email}<br /><br />
+        Last Sign In: <br />
+        {user.metadata.lastSignInTime}<br /><br />
+        Create Date: <br />
+        {user.metadata.creationTime}
       </div>
     </div>
   );

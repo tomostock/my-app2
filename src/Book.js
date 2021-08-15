@@ -12,6 +12,7 @@ function Book(props) {
                     <h3>不思議な少年</h3>
                     <img src={boy} width="200" alt="boy"/>
                     <p className="pageNum">0/5</p>
+                    <div className="note" />
                 </div>
                 <div className="Page">
                     <br /><br />

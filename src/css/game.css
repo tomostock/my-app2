@@ -1,7 +1,6 @@
 .game {
   background-color: #fff;
   width: 100%;
-  padding-bottom: 68px;
 }
 
 ol, ul {
@@ -22,7 +21,7 @@ ol, ul {
   background-image: url("../img/wood.jpg");
 }
 .square {
-  border: 1px solid #000;
+  border: 1px solid #0a1612;
   float: left;
   font-size: 50px;
   font-weight: bold;

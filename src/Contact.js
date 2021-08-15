@@ -46,7 +46,7 @@ export default function Contact() {
               name="message"
             />
           </FormControl>
-          <Button variant="contained" color="primary" type="submit">Send</Button>
+          <Button variant="contained" color="primary" type="submit">Send to Auther</Button>
         </form>
       </div>
     </div>

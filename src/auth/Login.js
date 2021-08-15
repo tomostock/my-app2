@@ -17,7 +17,7 @@ const Login = ({ history }) => {
     <div className="auth">
       <div className="formContainer">
         <form onSubmit={handleSubmit}>
-          <h1>Log In</h1>
+          <h1>Login</h1>
           <FormControl>
             <InputLabel>
               Email
@@ -30,10 +30,10 @@ const Login = ({ history }) => {
             </InputLabel>
             <Input name="password" type="password" placeholder="Password" />
           </FormControl>
-          <Button variant="contained" color="primary" type="submit">Log in</Button>
+          <Button variant="contained" color="primary" type="submit">Login</Button>
         </form>
-        <Button color="primary" href="/signup">
-          signup
+        <Button  color="primary" href="/signup">
+          <span className="signup">SignUp</span>
         </Button>
       </div>
     </div>

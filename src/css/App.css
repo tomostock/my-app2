@@ -65,7 +65,6 @@ form {
 }
 .title {
   z-index: 10;
-  margin-bottom: 16px;
 }
 #lou {
   display: block;
@@ -109,10 +108,14 @@ form {
     opacity: 1;
     transform: translate(0px, 0px) rotateZ(0deg)
   }
-  20% {transform: translate(-30px, -30px) rotateZ(10deg)}
-  40% {transform: translate(0px, 0px) rotateZ(0deg)}
-  60% {transform: translate(30px, 30px) rotateZ(10deg)}
-  80% {transform: translate(0px, 0px) rotateZ(0deg)}
+  10% {transform: translate(-30px, -30px)}
+  20% {transform: translate(0px, 0px)}
+  30% {transform: translate(30px, 30px)}
+  40% {transform: translate(0px, 0px)}
+  50% {transform: translate(30px, -60px)}
+  60% {transform: translate(0px, 0px)}
+  70% {transform: translate(-60px, 30px)}
+  80% {transform: translate(0px, 0px)}
   100% {
     display: none;
     opacity: 0;
@@ -122,6 +125,7 @@ form {
 
 #loginBtn {
   display: block;
+  width: 240px;
 }
 
 .nullBtn {

@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     textAlign: '-webkit-center',
   },
   icon: {
-    fontSize: 36,
+    fontSize: 35,
   }
 });
 
@@ -43,21 +43,21 @@ function Nav() {
   return (
     <div className="flex">
       <Link to="/"className={classes.link}>
-        <MenuItem className={classes.listItem}><HomeIcon />　TOP</MenuItem>
+        <MenuItem className={classes.listItem}><HomeIcon className={classes.yIcon}/>　Top</MenuItem>
       </Link>
       <Link to="/Profile"className={classes.link}>
-        <MenuItem className={classes.listItem}><AssignmentIndIcon />　PROFILE</MenuItem>
+        <MenuItem className={classes.listItem}><AssignmentIndIcon />　Profile</MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
         { currentUser ? 
-          <MenuItem className={classes.listItem} onClick={GameTittle}><GamepadIcon />　GAME</MenuItem> 
-          : <MenuItem className={classes.listItem} ><GamepadIcon />　GAME</MenuItem> }
+          <MenuItem className={classes.listItem} onClick={GameTittle}><GamepadIcon />　Game</MenuItem> 
+          : <MenuItem className={classes.listItem} ><GamepadIcon />　Game</MenuItem> }
       </Link>
       <Link to="/Book"className={classes.link}>
-        <MenuItem className={classes.listItem}><MenuBookIcon />　LYLIC</MenuItem>
+        <MenuItem className={classes.listItem}><MenuBookIcon />　Lylic</MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
-        <MenuItem className={classes.listItem}><MailIcon />　MAIL</MenuItem>
+        <MenuItem className={classes.listItem}><MailIcon />　Mail</MenuItem>
       </Link>
     </div>
   );
@@ -71,30 +71,30 @@ export function Fnav() {
       <Link to="/Profile"className={classes.link}>
         <MenuItem className={classes.flistItem}>
           <AssignmentIndIcon className={classes.icon} />
-          <div className="fnavName">PROFILE</div>
+          <div className="fnavName">Profile</div>
         </MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
       { currentUser ? 
         <MenuItem className={classes.flistItem} onClick={GameTittle}>
           <GamepadIcon className={classes.icon} />
-            <div className="fnavName">GAME</div>
+            <div className="fnavName">Game</div>
         </MenuItem> :
         <MenuItem className={classes.flistItem} > 
           <GamepadIcon className={classes.icon} />
-          <div className="fnavName">GAME</div>
+          <div className="fnavName">Game</div>
         </MenuItem> }
       </Link>
       <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.flistItem}>
           <MenuBookIcon className={classes.icon} />
-          <div className="fnavName">LYLIC</div>
+          <div className="fnavName">Lylic</div>
         </MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
         <MenuItem className={classes.flistItem}>
           <MailIcon className={classes.icon} />
-          <div className="fnavName">MAIL</div>
+          <div className="fnavName">Mail</div>
         </MenuItem>
       </Link>
     </div>

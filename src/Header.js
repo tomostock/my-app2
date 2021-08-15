@@ -19,13 +19,20 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    backgroundColor: '#1a2930',
+    width: '70px',
+    height: '55px',
+    fontSize: '12px',
+    color: '#FFF',
+    transform:　'rotate(-15deg)',
+    margin: '24px 10px'
   },
   title: {
     flexGrow: 1,
   },
   list: {
     width: 250,
-    backgroundColor: '#424242',
+    backgroundColor: '#1a2930',
   },
   link: {
     textDecorationLine: 'none',
@@ -71,8 +78,8 @@ export default function MenuAppBar() {
               className={classes.menuButton} 
               color="inherit" 
               aria-label="menu"
-            >
-              <MenuIcon style={{ fontSize: 30 }}/>
+            >menu
+              {/* <MenuIcon style={{ fontSize: 30 }}/> */}
             </IconButton>
             <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
               <div
@@ -97,7 +104,7 @@ export default function MenuAppBar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle style={{ fontSize: 30 }}/>
+                <AccountCircle style={{ fontSize: 35 }}/>
               </IconButton>
               <Menu
                 id="menu-appbar"

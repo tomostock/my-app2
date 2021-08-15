@@ -94,12 +94,12 @@ class Game extends React.Component {
     if( this.state.stepNumber > 0 && this.state.stepNumber < 9 ) {
       return(
         <Button variant="contained" color="primary" onClick={() => this.jumpTo(stepNumber-1)} className="button">
-          ◀︎
+          Back
         </Button>
       );
     } else {
       return(
-        <Button variant="contained" color="primary" className="button"　disabled>◀︎</Button>
+        <Button variant="contained" color="primary" className="button"　disabled>Back</Button>
       );
     }
   }
@@ -109,7 +109,7 @@ class Game extends React.Component {
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
     const moves = history.map((step, move) => {
-      const desc = move ? '' : 'reset';
+      const desc = move ? '' : 'Reset';
       return(
         <li key={move}>
           { move === 0 ? 

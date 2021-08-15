@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: '2px solid #0a1612',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -90,7 +90,7 @@ export default function App() {
         {currentUser ? (<div className="nullBtn" />) : (
           <div>
           <Button variant="contained" color="primary" type="submit" onClick={handleOpen} id="loginBtn">
-            Log in
+            Login
           </Button>
           <Modal
             aria-labelledby="transition-modal-title"
@@ -114,9 +114,6 @@ export default function App() {
                       <Route exact path="/signup" component={SignUp} />
                     </Router>
                   </AuthProvider>
-                  <Button color="primary" href="/signup" onClick={handleClose}>
-                  signup
-                  </Button>
                 </div>
               </div>
             </Fade>
