@@ -5,11 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.primary.light,
+    background: 'none',
     position: 'fixed',
     bottom: 0,
     width: '100%',
-    height: '56px',
+    height: '82px',
+    color: '#0a1612'
   },
   inner: {
     display: 'flex',

@@ -3,9 +3,10 @@ import Button from '@material-ui/core/Button';
 import ReactDOM from 'react-dom';
 import './css/game.css';
 import SBtn from './sound/button.mp3'
-import SDrum from './sound/drum.mp3'
+import SDrum from './sound/dog.mp3'
 import Pb from './img/piece_b.png'
 import Pw from './img/piece_w.png'
+import BAW from './img/blackandwhite.png'
 
 class Board extends React.Component {
   renderSquare(i) {
@@ -126,14 +127,14 @@ class Game extends React.Component {
     let winLine = [];
 
     if (winner) {
-      status = winner.player === 'o' ? 'WINNER:BLACK' : 'WINNER:WHITE';
+      status = winner.player === 'o' ? 'Winner:Black' : 'Winner:White';
       winLine = winner.line;
       document.getElementById("overlay").style.display ="none";
       document.getElementById("cap").style.display ="block";
       const audio = new Audio(SDrum);
       audio.play();
     } else {
-      status = 'Next: ' + (this.state.oIsNext ? 'BLACK' : 'WHITE');
+      status = 'Next: ' + (this.state.oIsNext ? 'Black' : 'White');
       if( this.state.stepNumber === 9) {
         status = "Draw";
         winLine = [0,1,2,3,4,5,6,7,8]
@@ -173,11 +174,14 @@ export default Game;
 
 class Tittle extends React.Component {
   render() {
-//検証    tittlealarm()
     return (
       <div id="tittle">
-        <h2>BLACK || WHITE</h2>
-        <div className="progress">●</div>
+        <div>
+          <h1>Black & White</h1>
+        </div>
+        <div>
+          <img src={BAW} alt="black and white" className="titileimg"/>
+        </div>
       </div>
     );
   }
@@ -223,7 +227,7 @@ function calculateWinner(squares) {
 export function TittleAlarm() {
   setTimeout(function() {
     document.getElementById("tittle").style.display ="none";
-  }, 5000); 
+  }, 3000); 
 }
 
 function alarm() {

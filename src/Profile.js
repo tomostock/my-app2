@@ -7,6 +7,7 @@ export default function Profile() {
     <div className="profile">
       <h1>PROFILE</h1>
       <h2>about this APP</h2>
+      <p>Deploy: Heroku</p>
       <p>Auth: FireBase</p>
       <p>Ui: Material-UI</p>
       <p>Mail: emailjs</p>
@@ -14,19 +15,11 @@ export default function Profile() {
       
       <h2>about me</h2>
       <p>Name: Tomomi Suzuki</p>
+      <p>Address: Sagamihara city, Kanagawa</p>
+      <p>Birth: 1977 at Shibuya city, Tokyo</p>
       <p>Mail: tomos.tomomi@gmail.com</p>
-
-      <h2>about me</h2>
-      <p>Name: Tomomi Suzuki</p>
-      <p>Mail: tomos.tomomi@gmail.com</p>
-      <p>Name: Tomomi Suzuki</p>
-      <p>Mail: tomos.tomomi@gmail.com</p>
-      <p>Name: Tomomi Suzuki</p>
-      <p>Mail: tomos.tomomi@gmail.com</p>
-      <p>Name: Tomomi Suzuki</p>
-      <p>Mail: tomos.tomomi@gmail.com</p>
-      <p>Name: Tomomi Suzuki</p>
-      <p>Mail: tomos.tomomi@gmail.com</p>
+      <p>Develop Experienced: about 12y</p>
+      <span className="comment">※Please contact me by email for job history</span>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import lou2 from './img/lou2.jpg';
 import lou1 from './img/lou1.jpg';
 import './css/App.css';
 import './css/auth.css';
+import './css/index.css';
 import Button from '@material-ui/core/Button';
 import Home from "./components/Home";
 import Login from "./auth/Login";
@@ -26,9 +27,10 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #0a1612',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    border: '1px solid #0a1612',
+    padding:  '0px',
+    width: '280px',
+    boxShadow: theme.shadows[5]
   },
 }));
 
@@ -69,6 +71,12 @@ function rotateLasers() {
 }
 
 export default function App() {
+  setTimeout(function() {
+    document.getElementById("AppTitle").classList.add("-visible");
+  }, 5000); 
+  setTimeout(function() {
+    document.getElementById("AppTitle").style.display ="none";
+  }, 6000);
   const { currentUser } = useContext(AuthContext);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -80,6 +88,14 @@ export default function App() {
   };
   return (
     <div className="App">
+      <div id="AppTitle">
+        <h1>
+          <span className="c1">what</span>
+          <span className="c2">.</span>
+          <span className="c3">.</span>
+          <span className="c4">?</span>
+        </h1>
+      </div>
       <img src={Title} className="title"width="320" alt="portfolio in react"/>
       <div className="App-header">
         <span id="box" onClick={rotateLasers} >

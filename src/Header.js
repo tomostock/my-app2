@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -14,6 +13,12 @@ import MenuList from '@material-ui/core/MenuList';
 import { app } from "./base";
 
 const useStyles = makeStyles((theme) => ({
+  appbar: {
+    position: 'fixed',
+    color: '#0a1612',
+    background: 'none',
+    boxShadow: 'none'
+  },
   root: {
     flexGrow: 1,
   },
@@ -25,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '12px',
     color: '#FFF',
     transform:　'rotate(-15deg)',
+    fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
     margin: '24px 10px'
   },
   title: {
@@ -33,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
   list: {
     width: 250,
     backgroundColor: '#1a2930',
+    height: '100%'
   },
   link: {
     textDecorationLine: 'none',
@@ -70,7 +77,7 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar className={classes.appbar}>
         <Toolbar>
           <React.Fragment key={'left'}>
             <IconButton onClick={toggleDrawer('left', true)} 
@@ -78,8 +85,7 @@ export default function MenuAppBar() {
               className={classes.menuButton} 
               color="inherit" 
               aria-label="menu"
-            >menu
-              {/* <MenuIcon style={{ fontSize: 30 }}/> */}
+            >Menu
             </IconButton>
             <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
               <div

@@ -31,7 +31,7 @@ const SignUp = ({ history }) => {
             </InputLabel>
             <Input name="password" type="password" placeholder="Password" />
           </FormControl>
-          <Button variant="contained" color="primary" type="submit">Log in</Button>
+          <Button variant="contained" color="primary" type="submit">Signup</Button>
         </form>
       </div>
     </div>

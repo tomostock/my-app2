@@ -2,6 +2,7 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
+import ClearIcon from '@material-ui/icons/Clear';
 import { makeStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
 import GamepadIcon from '@material-ui/icons/Gamepad';
@@ -10,26 +11,58 @@ import HomeIcon from '@material-ui/icons/Home';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import { AuthContext } from "./auth/AuthProvider";
 import { TittleAlarm } from "./Game";
+import Title from './img/mtitle.png';
 
 const useStyles = makeStyles({
   link: {
     textDecorationLine: 'none',
-    color: 'white',
+    color: 'white'
   },
   listItem: {
+    fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
     minHeight: '50px',
-    color: 'white',
+    color: ' white',
   },
   flistItem: {
+    fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
     minHeight: '36px',
-    color: 'white',
+    color: '#0a1612',
     width: '75px',
     display: 'grid',
     justifyContent: 'center',
     textAlign: '-webkit-center',
   },
   icon: {
-    fontSize: 35,
+    fontSize: 35
+  },
+  mtitle: {
+    width: '200px',
+    margin: '24px'
+  },
+  right: {
+    textAlign: 'right',
+    marginRight: '8px'
+  },
+  rightIcon: {
+    fontSize: 30,
+    color: 'white'
+  },
+  drowermenu: {
+    marginTop: '48px',
+    marginLeft: '16px'
+  },
+  flex: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  fnavName: {
+    textAlign: 'center',
+    fontSize: '12px',
+    color: '#0a1612',
+    fontStyle: 'italic',
+    background: 'linear-gradient(transparent 80%, #f7ce3e 60%)',
+    marginTop: '-2px',
+    transform: 'rotate(-5deg)'
   }
 });
 
@@ -42,23 +75,27 @@ function Nav() {
   const { currentUser } = useContext(AuthContext);
   return (
     <div className="flex">
-      <Link to="/"className={classes.link}>
-        <MenuItem className={classes.listItem}><HomeIcon className={classes.yIcon}/>　Top</MenuItem>
-      </Link>
-      <Link to="/Profile"className={classes.link}>
-        <MenuItem className={classes.listItem}><AssignmentIndIcon />　Profile</MenuItem>
-      </Link>
-      <Link to="/Game"className={classes.link}>
-        { currentUser ? 
-          <MenuItem className={classes.listItem} onClick={GameTittle}><GamepadIcon />　Game</MenuItem> 
-          : <MenuItem className={classes.listItem} ><GamepadIcon />　Game</MenuItem> }
-      </Link>
-      <Link to="/Book"className={classes.link}>
-        <MenuItem className={classes.listItem}><MenuBookIcon />　Lylic</MenuItem>
-      </Link>
-      <Link to="/Contact"className={classes.link}>
-        <MenuItem className={classes.listItem}><MailIcon />　Mail</MenuItem>
-      </Link>
+      <img src={Title} alt="portfolio in react" className={classes.mtitle}/>
+      <div className={classes.right}><ClearIcon className={classes.rightIcon}/></div>
+      <div className={classes.drowermenu}>
+        <Link to="/"className={classes.link}>
+          <MenuItem className={classes.listItem}><HomeIcon className={classes.yIcon}/>　Top</MenuItem>
+        </Link>
+        <Link to="/Profile"className={classes.link}>
+          <MenuItem className={classes.listItem}><AssignmentIndIcon />　Profile</MenuItem>
+        </Link>
+        <Link to="/Game"className={classes.link}>
+          { currentUser ? 
+            <MenuItem className={classes.listItem} onClick={GameTittle}><GamepadIcon />　Game</MenuItem> 
+            : <MenuItem className={classes.listItem} ><GamepadIcon />　Game</MenuItem> }
+        </Link>
+        <Link to="/Book"className={classes.link}>
+          <MenuItem className={classes.listItem}><MenuBookIcon />　Lylic</MenuItem>
+        </Link>
+        <Link to="/Contact"className={classes.link}>
+          <MenuItem className={classes.listItem}><MailIcon />　Mail</MenuItem>
+        </Link>
+      </div>
     </div>
   );
 }
@@ -67,34 +104,34 @@ export function Fnav() {
   const classes = useStyles();
   const { currentUser } = useContext(AuthContext);
   return (
-    <div className="flex">
+    <div className={classes.flex}>
       <Link to="/Profile"className={classes.link}>
         <MenuItem className={classes.flistItem}>
           <AssignmentIndIcon className={classes.icon} />
-          <div className="fnavName">Profile</div>
+          <div className={classes.fnavName}>Profile</div>
         </MenuItem>
       </Link>
       <Link to="/Game"className={classes.link}>
       { currentUser ? 
         <MenuItem className={classes.flistItem} onClick={GameTittle}>
           <GamepadIcon className={classes.icon} />
-            <div className="fnavName">Game</div>
+            <div className={classes.fnavName}>Game</div>
         </MenuItem> :
         <MenuItem className={classes.flistItem} > 
           <GamepadIcon className={classes.icon} />
-          <div className="fnavName">Game</div>
+          <div className={classes.fnavName}>Game</div>
         </MenuItem> }
       </Link>
       <Link to="/Book"className={classes.link}>
         <MenuItem className={classes.flistItem}>
           <MenuBookIcon className={classes.icon} />
-          <div className="fnavName">Lylic</div>
+          <div className={classes.fnavName}>Lylic</div>
         </MenuItem>
       </Link>
       <Link to="/Contact"className={classes.link}>
         <MenuItem className={classes.flistItem}>
           <MailIcon className={classes.icon} />
-          <div className="fnavName">Mail</div>
+          <div className={classes.fnavName}>Mail</div>
         </MenuItem>
       </Link>
     </div>

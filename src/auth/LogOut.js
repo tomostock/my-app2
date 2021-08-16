@@ -1,6 +1,5 @@
 import { app } from "../base";
 import '../css/auth.css';
-import '../css/index.css';
 import { Redirect } from 'react-router-dom';
 
 const LogOut = () => {

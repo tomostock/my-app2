@@ -2,5 +2,10 @@
   padding: 20px 20px 0px 20px;
   margin: auto;
   width: 100%;
-  padding-bottom: 68px;
+  padding-bottom: 83px;
+  margin-top: 83px;
+}
+
+.comment {
+  font-size: 15px;
 }

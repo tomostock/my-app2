@@ -4,6 +4,7 @@ import { AuthContext } from "./AuthProvider";
 import Button from '@material-ui/core/Button';
 import '../css/auth.css';
 import { FormControl, InputLabel, Input } from '@material-ui/core';
+import { TittleAlarm } from "../Game";
 
 const Login = ({ history }) => {
   const { login } = useContext(AuthContext);
@@ -11,6 +12,9 @@ const Login = ({ history }) => {
     event.preventDefault();
     const { email, password } = event.target.elements;
     console.log("login");
+    if(history.location.pathname === "/Game") {
+      TittleAlarm();
+    }
     login(email.value, password.value, history.location);
   };
   return (
