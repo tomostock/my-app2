@@ -139,7 +139,7 @@ ol, ul {
 #tittle {
   display: block;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   background: #f7ce3e;
   z-index: 100;
