@@ -143,7 +143,6 @@ ol, ul {
   position: absolute;
   background: #f7ce3e;
   z-index: 100;
-  padding-top: 200px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
