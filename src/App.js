@@ -71,7 +71,7 @@ function rotateLasers() {
 }
 
 export function Startup() {
-  if (document.location.pathname === "/signup" || document.location.pathname === "/MyAccount"){
+  if (document.location.pathname === "/signup" || document.location.pathname === "/myaccount"){
     return (<div />)
   }
   setTimeout(function() {
