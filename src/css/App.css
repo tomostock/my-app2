@@ -47,6 +47,8 @@ form {
 
 .MuiButton-contained {
   margin-top: 32px;
+  height: 50px;
+  font-size: 15px;
 }
 
 #box {
@@ -54,7 +56,7 @@ form {
   animation: hurueru .5s  infinite;
 }
 #box_err {
-  height: 200px;
+  height: 240px;
 }
 #box2 {
   display: inline-block;
@@ -134,23 +136,21 @@ form {
 
 
 #AppTitle {
-  position: absolute;
-  z-index: 2147483647;
-  display: block;
   background-color: white;
-  width: 100vw;
-  height: 100%;
-  margin: 0px -28px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  top: 0;
-  visibility: visible;
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 2147483647;
 }
+
 #AppTitle.-visible {
   animation: anim 2s;
 }
+
 @keyframes anim {
   0% {
   transform: translateY(0px);
@@ -159,6 +159,7 @@ form {
   transform: translateY(-1000px);
   }
 }
+
 .c1, .c2, .c3, .c4 {
   opacity: 0;
   animation: 1.0s linear forwards fadeIn;

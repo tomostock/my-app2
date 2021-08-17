@@ -70,13 +70,29 @@ function rotateLasers() {
   }, 6500);
 }
 
-export default function App() {
+export function Startup() {
+  if (document.location.pathname === "/signup"){
+    return (<div />)
+  }
   setTimeout(function() {
     document.getElementById("AppTitle").classList.add("-visible");
   }, 5000); 
   setTimeout(function() {
     document.getElementById("AppTitle").style.display ="none";
   }, 6000);
+  return (
+    <div id="AppTitle">
+      <h1>
+        <span className="c1">what</span>
+        <span className="c2">.</span>
+        <span className="c3">.</span>
+        <span className="c4">?</span>
+      </h1>
+    </div>
+    )
+}
+
+export default function App() {
   const { currentUser } = useContext(AuthContext);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -88,19 +104,11 @@ export default function App() {
   };
   return (
     <div className="App">
-      <div id="AppTitle">
-        <h1>
-          <span className="c1">what</span>
-          <span className="c2">.</span>
-          <span className="c3">.</span>
-          <span className="c4">?</span>
-        </h1>
-      </div>
       <img src={Title} className="title"width="320" alt="portfolio in react"/>
       <div className="App-header">
         <span id="box" onClick={rotateLasers} >
-          <img id="lou" src={lou3} height="200" alt="lou"/>
-          <img id="lou2" src={lou2} height="200" alt="lou2"/>
+          <img id="lou" src={lou3} height="240" alt="lou"/>
+          <img id="lou2" src={lou2} height="240" alt="lou2"/>
         </span>
         <div id="box3" />
         {currentUser ? (<div className="nullBtn" />) : (

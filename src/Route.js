@@ -13,6 +13,8 @@ import Footer from './Footer';
 import SignUp from "./auth/SignUp";
 import LogOut from "./auth/LogOut";
 import Send from "./Send";
+import { Startup } from "./App";
+import { GameStart } from "./Game";
 
 class Routes extends React.Component {
   render() {
@@ -20,6 +22,8 @@ class Routes extends React.Component {
       <AuthProvider>
         <Router>
           <Route>
+            <Startup />
+            <GameStart />
             <Header />
           </Route>
           <div className='contents'>

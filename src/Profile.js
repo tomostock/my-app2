@@ -19,7 +19,7 @@ export default function Profile() {
       <p>Birth: 1977 at Shibuya city, Tokyo</p>
       <p>Mail: tomos.tomomi@gmail.com</p>
       <p>Develop Experienced: about 12y</p>
-      <span className="comment">※Please contact me by email for job history</span>
+      <span className="comment">※Please contact me by email for <u>job history</u></span>
     </div>
   );
 }

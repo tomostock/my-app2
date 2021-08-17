@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
     backgroundColor: '#1a2930',
-    width: '70px',
-    height: '55px',
-    fontSize: '12px',
+    width: '100px',
+    height: '75px',
+    fontSize: '15px',
     color: '#FFF',
     transform:　'rotate(-15deg)',
     fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
@@ -110,7 +110,7 @@ export default function MenuAppBar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle style={{ fontSize: 35 }}/>
+                <AccountCircle style={{ fontSize: 40 }}/>
               </IconButton>
               <Menu
                 id="menu-appbar"

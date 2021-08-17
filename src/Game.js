@@ -145,7 +145,6 @@ class Game extends React.Component {
     
     return (
       <div className="game">
-        <Tittle />
         <div className="game-board">
           <div id="cap" className="game-cap">{status}</div>
           <Board
@@ -172,19 +171,15 @@ class Game extends React.Component {
 }
 export default Game;
 
-class Tittle extends React.Component {
-  render() {
+export function GameStart() {
     return (
       <div id="tittle">
         <div>
           <h1>Black & White</h1>
-        </div>
-        <div>
           <img src={BAW} alt="black and white" className="titileimg"/>
         </div>
       </div>
     );
-  }
 }
 // ========================================
 
@@ -225,8 +220,9 @@ function calculateWinner(squares) {
 }
 
 export function TittleAlarm() {
+  document.getElementById("tittle").style.display ="flex";
   setTimeout(function() {
-    document.getElementById("tittle").style.display ="none";
+   document.getElementById("tittle").style.display ="none";
   }, 3000); 
 }
 

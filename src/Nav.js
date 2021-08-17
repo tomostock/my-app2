@@ -27,13 +27,13 @@ const useStyles = makeStyles({
     fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
     minHeight: '36px',
     color: '#0a1612',
-    width: '75px',
+    width: '88px',
     display: 'grid',
     justifyContent: 'center',
     textAlign: '-webkit-center',
   },
   icon: {
-    fontSize: 35
+    fontSize: 40
   },
   mtitle: {
     width: '200px',
@@ -57,12 +57,13 @@ const useStyles = makeStyles({
   },
   fnavName: {
     textAlign: 'center',
-    fontSize: '12px',
+    fontSize: '15px',
     color: '#0a1612',
     fontStyle: 'italic',
     background: 'linear-gradient(transparent 80%, #f7ce3e 60%)',
     marginTop: '-2px',
-    transform: 'rotate(-5deg)'
+    transform: 'rotate(-5deg)',
+    borderRadius: '2px'
   }
 });
 

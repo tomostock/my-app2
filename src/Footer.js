@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: 0,
     width: '100%',
-    height: '82px',
+    height: '100px',
     color: '#0a1612'
   },
   inner: {
