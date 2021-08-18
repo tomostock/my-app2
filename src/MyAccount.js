@@ -7,7 +7,7 @@ export default function MyAccount() {
   console.log(user);
   return (
     <div className="MyAccount">
-      <h1>My Account</h1>
+      <h1>My Account %&!#$%&!#</h1>
       <div>
         Email: <br />
         {user.email}<br /><br />

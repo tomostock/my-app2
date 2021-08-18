@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
     backgroundColor: '#1a2930',
-    width: '100px',
-    height: '75px',
+    width: '85px',
+    height: '60px',
     fontSize: '15px',
     color: '#FFF',
     transform:　'rotate(-15deg)',
@@ -39,8 +39,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   mtitle: {
-    width: '200px',
-    margin: '24px'
+    width: '218px',
+    margin: '24px 16px',
   },
   list: {
     width: 250,
