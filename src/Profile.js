@@ -13,7 +13,7 @@ export default function Profile() {
       <p>Mail: emailjs</p>
       <p>Game: React Tutorial</p>
       
-      <h2>about me</h2>
+      <h2>about Auther</h2>
       <p>Name: Tomomi Suzuki</p>
       <p>Address: Sagamihara city, Kanagawa</p>
       <p>Birth: 1977 at Shibuya city, Tokyo</p>

@@ -2,7 +2,6 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
-import ClearIcon from '@material-ui/icons/Clear';
 import { makeStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
 import GamepadIcon from '@material-ui/icons/Gamepad';
@@ -11,7 +10,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import { AuthContext } from "./auth/AuthProvider";
 import { TittleAlarm } from "./Game";
-import Title from './img/mtitle.png';
+
 
 const useStyles = makeStyles({
   link: {
@@ -34,18 +33,6 @@ const useStyles = makeStyles({
   },
   icon: {
     fontSize: 40
-  },
-  mtitle: {
-    width: '200px',
-    margin: '24px'
-  },
-  right: {
-    textAlign: 'right',
-    marginRight: '8px'
-  },
-  rightIcon: {
-    fontSize: 30,
-    color: 'white'
   },
   drowermenu: {
     marginTop: '48px',
@@ -76,8 +63,6 @@ function Nav() {
   const { currentUser } = useContext(AuthContext);
   return (
     <div className="flex">
-      <img src={Title} alt="portfolio in react" className={classes.mtitle}/>
-      <div className={classes.right}><ClearIcon className={classes.rightIcon}/></div>
       <div className={classes.drowermenu}>
         <Link to="/"className={classes.link}>
           <MenuItem className={classes.listItem}><HomeIcon className={classes.yIcon}/>　Top</MenuItem>

@@ -11,6 +11,8 @@ import Drawer from '@material-ui/core/Drawer';
 import Nav from './Nav';
 import MenuList from '@material-ui/core/MenuList';
 import { app } from "./base";
+import Title from './img/mtitle.png';
+import ClearIcon from '@material-ui/icons/Clear';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -31,10 +33,14 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFF',
     transform:　'rotate(-15deg)',
     fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
-    margin: '24px 10px'
+    margin: '24px 10px 0px'
   },
   title: {
     flexGrow: 1,
+  },
+  mtitle: {
+    width: '200px',
+    margin: '24px'
   },
   list: {
     width: 250,
@@ -44,6 +50,14 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecorationLine: 'none',
     color: 'inherit',
+  },
+  right: {
+    textAlign: 'right',
+    marginRight: '8px'
+  },
+  rightIcon: {
+    fontSize: 30,
+    color: 'white'
   },
 }));
 
@@ -94,6 +108,8 @@ export default function MenuAppBar() {
                 onClick={toggleDrawer('left', false)}
                 onKeyDown={toggleDrawer('left', false)}
               >
+                <img src={Title} alt="portfolio in react" className={classes.mtitle}/>
+                <div className={classes.right}><ClearIcon className={classes.rightIcon}/></div>
                 <MenuList>
                   <Nav />
                 </MenuList>
