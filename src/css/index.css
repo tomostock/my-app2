@@ -52,3 +52,6 @@ code {
 .Mui-disabled {
   color: #c5c1c0!important;
 }
+.MuiTouchRipple-root {
+  position: unset!important;
+}
