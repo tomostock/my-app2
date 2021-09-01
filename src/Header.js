@@ -33,7 +33,13 @@ const useStyles = makeStyles((theme) => ({
     color: '#FFF',
     transform:　'rotate(-15deg)',
     fontFamily: ['"Noto Serif"','"Shippori Mincho B1"', 'serif'],
-    margin: '24px 10px 0px'
+    margin: '24px 10px 0px',
+    ":active": {
+      backgroundColor: '#1a2930'
+    },
+    ":hover": {
+      backgroundColor: '#1a2930'
+    }
   },
   title: {
     flexGrow: 1,

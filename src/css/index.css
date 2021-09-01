@@ -42,16 +42,17 @@ code {
 .MuiButton-root {
   font-family: 'Noto Serif','Shippori Mincho B1', serif!important;
   text-transform: none!important;
+  z-index: 20000;
 }
+
 .MuiButton-root:active {
   background-color: #1a2930!important;
 }
+
 .MuiButton-root:hover {
   background-color: #1a2930!important;
 }
+
 .Mui-disabled {
   color: #c5c1c0!important;
-}
-.MuiTouchRipple-root {
-  position: unset!important;
 }
